@@ -9,27 +9,29 @@ import sketch3 from 'app/assets/sketch3.png';
 // Step chart
 import StepChart from './components/stepChart';
 
+// Spinning globe
+import SpinningGlobe from './components/globe'
+
 export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-      Re-designing The New York Times' Pandemic Visualization
+      Persuation | Deception
       </h1>
       <div className="text">By Ian Lee</div>
       <br></br>
 
       <p className="mb-4 normal">
         {`
-        Featured in a New York Times article by Dr. Jeffrey Shaman, a renowned  scientist at Columbia University,
-        the visualization below presents patterns of new COVID-19 cases from early 2020 to early 2022. 
-        It maps the evolution of the pandemics radially, with each quadrant representing a quarter of the year and time progressing clockwise.
-        We will explore the design trade-offs considered in this visualization and offer a re-design addressing pitfalls.`}
+        Often, design choices we make give visualizations a rhetorical power blur the line between persuasion and deception, shaping what a reader concludes and remembers about the data.
+        In this analysis, we will explore how we can visualize the same dataset in opposing perspectives.`}
       </p>
 
       <div className="big">
-        Original Design
+        Dataset
       </div>
       <hr className="solid-line"></hr>
+      <SpinningGlobe />
 
       <Image src={covidSpiral} alt="Description of image"  
       
