@@ -107,9 +107,9 @@ html {
   @apply font-medium;
 }
 
-.prose ul {
+/* .prose ul {
   @apply list-disc pl-6;
-}
+} */
 
 .prose ol {
   @apply list-decimal pl-6;
@@ -147,4 +147,59 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+/* New CSS */
+.text {
+  font-weight: 200
+}
+
+.normal {
+  font-size: 0.9rem
+}
+
+.solid-line {
+  border: none;
+  border-top: 1px solid white; /* Adjust color and thickness as needed */
+  margin: 10px 0; /* Adjust margins for spacing */
+}
+
+.big {
+  font-size: 1.5rem
+}
+
+ul {
+  list-style-type: disc;
+  padding: 10px 0 !important;
+  padding-left: 20px !important;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+.green {
+  color: lightgreen
+}
+
+.blue {
+  color: rgb(125, 177, 223)
+}
+
+.orange {
+  color: rgb(255, 200, 0)
+}
+
+.purple {
+  color: rgb(219, 151, 219)
+}
+
+.graph-text {
+  font-size: 0.7rem;
+  font-weight: 250;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(170, 165, 165)
 }
