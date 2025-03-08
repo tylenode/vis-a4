@@ -129,7 +129,7 @@ const CO2Slider = () => {
         {/* Year Display */}
         <div className="black text-center mt-2 text-xl font-semibold">
           Year: {year}
-          <div className="subtext">CO2 Concentration In parts per million (ppm): {data[year]}</div>
+          <div className="subtext">CO₂ Concentration In parts per million (ppm): {data[year]}</div>
         </div>
       </div>
 

@@ -14,8 +14,8 @@ export default function Page() {
 
       <p className="mb-4 normal">
         {`
-        Visualizations often blur the line between truth and misrepresentation as they reflect the narrative of their creator. In this analysis,
-        we explore the Monthly Atmospheric Carbon Dioxide Concentration dataset from IMF (Internal Monetary Funds).`}
+        Visualizations often blur the line between truth and misrepresentation as they are reflections of their creators' narratives. In this analysis,
+        we explore the Monthly Atmospheric Carbon Dioxide Concentration dataset from IMF (Internal Monetary Funds) and create two visualizations representing the two ends of an opinion.`}
       </p>
 
       <div className="big">
@@ -26,7 +26,7 @@ export default function Page() {
 
       <p className="mb-4 normal">
         {`
-      The dataset represents the CO2 concentration measured in Parts Per Million (ppm) from year  to now.
+      The dataset represents the CO₂ concentration measured in Parts Per Million (ppm) from year  to now.
       The source of the data is from National Oceanic and Atmospheric Administration (NOAA). Global Monitoring Laboratory: `}
       <a className="link" href="https://gml.noaa.gov/ccgg/trends/">Trends in Atmospheric Carbon Dioxide Data</a>
 
@@ -35,12 +35,12 @@ export default function Page() {
       </p>
 
       <div className="big">
-        Proposition
+        Opinion
       </div>
       <hr className="solid-line"></hr>
 
       <p className="mb-4 normal">
-      {`Greenhouse gases like CO2 is climing up at an alarming rate.`}
+      {`Carbon Dioxide concentration in our atmosphere is rising at an alarming rate.`}
       </p>
 
       <div className="big">
@@ -50,7 +50,7 @@ export default function Page() {
       <CO2Slider></CO2Slider>
       <figcaption className="text">
         [Figure 1] 
-        Percent increase in atmospheric CO2 concentration from year 1960-2024, using 1960 as the comparison baseline (first start-of-a-decade in the IMF dataset). Interact with the slider to observe change.
+        Percent increase in atmospheric CO₂ concentration from year 1960-2024, using 1960 as the comparison baseline (first start-of-a-decade in the IMF dataset). Interact with the slider to observe change.
       </figcaption>
       <h3 className='text-space'>Design Decisions:</h3>
       <ul className="normal">
@@ -66,7 +66,7 @@ export default function Page() {
                   Strength: Condensing the data into years make it much mor easily interpretable (66 years vs. approximately 66x12 months of data points).
                 </li>
                 <li>
-                  Interesting Observation: The IMF data first recorded full year for CO2 concentration data is actually 1959. Because as humans we have an implicit <b className='green'>round number preference </b>
+                  Interesting Observation: The IMF data first recorded full year for CO₂ concentration data is actually 1959. Because as humans we have an implicit <b className='green'>round number preference </b>
                   and beecause the difference in data between 1959 and 1960 is miniscule, I decided to use 1960 as my basis and specified my rationale in the caption.
                 </li>
               </ul>
@@ -107,7 +107,7 @@ export default function Page() {
                   Strength: Aligns well with the dynamic color gradient to convey urgency.
                 </li>
                 <li>
-                  Delta: Can benefit from a brief description of CO2 concentration range for different emojis. Though, sometimes a visualization is really "enough said" due to their intuition.
+                  Delta: Can benefit from a brief description of CO₂ concentration range for different emojis. Though, sometimes a visualization is really "enough said" due to their intuition.
                 </li>
               </ul>
             </li>
