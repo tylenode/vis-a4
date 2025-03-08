@@ -26,8 +26,8 @@ export default function Page() {
 
       <p className="mb-4 normal">
         {`
-      The dataset represents the CO₂ concentration measured in Parts Per Million (ppm) from year  to now.
-      The source of the data is from National Oceanic and Atmospheric Administration (NOAA). Global Monitoring Laboratory: `}
+      The dataset represents the CO₂ concentration measured in Parts Per Million (ppm) from year 1958 to now, with 1959-2024
+      data being full-year (covering all twelve months of the year). The source of the data is from National Oceanic and Atmospheric Administration (NOAA). Global Monitoring Laboratory: `}
       <a className="link" href="https://gml.noaa.gov/ccgg/trends/">Trends in Atmospheric Carbon Dioxide Data</a>
 
       {` and Scripps Institution of Oceanography, Carbon Dioxide Measurements: `}
@@ -66,8 +66,8 @@ export default function Page() {
                   Strength: Condensing the data into years make it much mor easily interpretable (66 years vs. approximately 66x12 months of data points).
                 </li>
                 <li>
-                  Interesting Observation: The IMF data first recorded full year for CO₂ concentration data is actually 1959. Because as humans we have an implicit <b className='green'>round number preference </b>
-                  and beecause the difference in data between 1959 and 1960 is miniscule, I decided to use 1960 as my basis and specified my rationale in the caption.
+                  Interesting Observation: The IMF data first recorded full year for CO₂ concentration data is actually 1959. But because as humans we have an <b className='green'>implicit round number preference </b>
+                  and because the difference in data between 1959 and 1960 is miniscule, I decided to use 1960 as my basis and specified my rationale in the caption.
                 </li>
               </ul>
             </li>
