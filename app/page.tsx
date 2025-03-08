@@ -166,7 +166,7 @@ export default function Page() {
                   with the minimized set of datapoints availale for reasoning, make this visualization deceptive.
                 </li>
                 <li>
-                  Strength: Ease of derive and interpret, making this a simple, effective deception.
+                  Strength: Reads like an ad.
                 </li>
               </ul>
             </li>
