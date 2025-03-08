@@ -150,6 +150,10 @@ table {
 }
 
 /* New CSS */
+.name {
+  font-weight: 250;
+}
+
 .text {
   font-weight: 250;
   font-size: 0.7rem;

@@ -9,7 +9,7 @@ export default function Page() {
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
       Persuation | Deception
       </h1>
-      <div className="text">By Ian Lee</div>
+      <div className="name">By Ian Lee</div>
       <br></br>
 
       <p className="mb-4 normal">
