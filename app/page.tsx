@@ -55,12 +55,13 @@ export default function Page() {
       <h3 className='text-space'>Design Decisions:</h3>
       <ul className="normal">
             <li>
-              <span className="u">Data Transformation to Aggregate By Year</span> Score: 2
+              <span className="u">Data Transformation to Display Average CO₂ Concentration across months of year</span> Score: 2
               <ul>
                 <li>Score: 2 (Fully Earnest)</li>
                 <li>
                   Rationale: The original dataset records the concentration data in months. This makes it challenging to observe macro-trends that tend to be more appealing to the general audience, since climate change is an event that has more noticeble effect over a longer-horizon.
-                  Therefore, I decided to aggregate the data by year. The transformation is logical, easily intepretable, and noted in both the graph title and the caption, making this a fully earnest design choice.
+                  Therefore, I decided to first aggregate the data by year then divides by the twelve months to get a monthly average. The transformation is logical, easily intepretable, and noted in both the graph title and the caption, making this a fully earnest design choice.
+                  This accounts for fluctuations from seasonality as well and help readers perform apple-to-apple comparison, which is a big plus.
                 </li>
                 <li>
                   Strength: Condensing the data into years make it much mor easily interpretable (66 years vs. approximately 66x12 months of data points).
