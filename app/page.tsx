@@ -107,7 +107,7 @@ export default function Page() {
                   Strength: Aligns well with the dynamic color gradient to convey urgency.
                 </li>
                 <li>
-                  Delta: Can benefit from a brief description of CO₂ concentration range for different emojis. Though, sometimes a visualization is really "enough said" due to their intuition.
+                  Delta: Can benefit from a brief description of CO₂ concentration range for different emojis. Though, visualizations can be "enough said" when representations are already intuitive.
                 </li>
               </ul>
             </li>

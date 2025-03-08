@@ -27,10 +27,10 @@ const CO2Slider = () => {
   const getColor = (percent) => {
     let hue;
   
-    if (percent <= 33) {
+    if (percent <= 10) {
       // Green to Orange (only a little green at the beginning)
       hue = 120 - (percent * 90) / 33;  // From green (120) to orange (30)
-    } else if (percent <= 90) {
+    } else if (percent <= 30) {
       // Orange to Crimson Red (dominant transition)
       hue = 30 - ((percent - 33) * 30) / 57;  // From orange (30) to crimson red (around 350)
     } else {
@@ -104,7 +104,7 @@ const CO2Slider = () => {
           onChange={(e) => setYear(parseInt(e.target.value))}
           className="w-full"
           style={{
-            background: `linear-gradient(to right, #ff7f50 ${((year - baseYear) / (2024 - baseYear)) * 100}%, #ccc 0%)`,
+            background: `linear-gradient(to right,rgb(220, 78, 78) ${((year - baseYear) / (2024 - baseYear)) * 100}%, #ccc 0%)`,
             appearance: 'none',
             height: '8px',
             borderRadius: '4px',
@@ -129,7 +129,7 @@ const CO2Slider = () => {
         {/* Year Display */}
         <div className="black text-center mt-2 text-xl font-semibold">
           Year: {year}
-          <div className="subtext">CO₂ Concentration In parts per million (ppm): {data[year]}</div>
+          <div className="subtext">CO₂ Concentration (measured in parts per million - ppm): {data[year]}</div>
         </div>
       </div>
 
