@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 // Assets
-import StepChart from './components/stepChart';
 import CO2Slider from './components/co2Slider';
 
 export default function Page() {
@@ -45,10 +44,15 @@ export default function Page() {
       </p>
 
       <div className="big">
-        Persuasive Visualization
+        Persuative Visualization
       </div>
       <hr className="solid-line"></hr>
       <CO2Slider></CO2Slider>
+      <figcaption className="text">
+        [Figure 1] 
+        Percent increase in CO2 concentration of our atmosphere using year 1958 (the first recorded year in the IMF dataset) as a comparison baseline,
+        As we slide left to right, we observe a clear rise in CO2 level over the years (1958-2024).
+      </figcaption>
 
       <div className="big">
         Deceptive Visualization

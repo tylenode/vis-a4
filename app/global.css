@@ -151,7 +151,11 @@ table {
 
 /* New CSS */
 .text {
-  font-weight: 200
+  font-weight: 250;
+  font-size: 0.7rem;
+  display: flex;
+  text-align: center;
+  font-style: italic;
 }
 
 .normal {
