@@ -74,7 +74,7 @@ export default function Page() {
             </li>
 
             <li>
-              <span className="u">Dynamic Color Encoding </span>
+              <span className="u">Dynamic Color Encoding and Varying Frequency Hearbeat </span>
               <ul>
                 <li>Score: 2 (High-to-fully Earnest)</li>
                 <li>
@@ -84,7 +84,7 @@ export default function Page() {
                   it puts in the readers' head an alignment in values with our proposition. I like the design choice, though, precisely it is easy to get the big idea right away.
                 </li>
                 <li>
-                  Strength: Dynamic makes the graph enjoyable and visually appealing. The hearbeat animation on the background also echoes a sense of urgency to reinforce our proposition.
+                  Strength: Dynamic makes the graph enjoyable and visually appealing. The hearbeat animation on the background echoes a progressive sense of urgency to reinforce our proposition.
                   Colors make plain numbers alive and relevant.
                 </li>
                 <li>
@@ -105,7 +105,7 @@ export default function Page() {
                   Nevetheless, this design choice is high-quality precisely due to its <b className='purple'>intuitive interpreation</b> and ability to relate with what the readers might be thinking in their head as they process the visualization.
                 </li>
                 <li>
-                  Strength: Aligns well with the dynamic color gradient to convey urgency.
+                  Strength: Intuition in conveying emotions and helping readers settle on a stance for the topic. Emojis are clear, modern, and relevant to the general audience. 
                 </li>
                 <li>
                   Delta: Can benefit from a brief description of CO₂ concentration range for different emojis. Though, visualizations can be "enough said" when representations are already intuitive.
