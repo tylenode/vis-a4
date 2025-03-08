@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 // Assets
 import CO2Slider from './components/co2Slider';
+import oppose from 'app/assets/oppose.png';
 
 export default function Page() {
   return (
@@ -40,7 +41,7 @@ export default function Page() {
       <hr className="solid-line"></hr>
 
       <p className="mb-4 normal">
-      {`Carbon Dioxide concentration in our atmosphere is rising at an alarming rate.`}
+      {`Carbon Dioxide concentration in our atmosphere has been rising consistently at an alarming rate.`}
       </p>
 
       <div className="big">
@@ -50,12 +51,13 @@ export default function Page() {
       <CO2Slider></CO2Slider>
       <figcaption className="text">
         [Figure 1] 
-        Percent increase in atmospheric CO₂ concentration from year 1960-2024, using 1960 as the comparison baseline (first start-of-a-decade in the IMF dataset). Interact with the slider to observe change.
+        Percent increase in atmospheric CO₂ concentration from year 1960-2024, using 1960 as the comparison baseline (first start-of-a-decade in the IMF dataset). Because seasonality introduces periodic flutuation in CO₂ concentration in a year,
+        the average monthly concentration in ppm (parts per million) is used for comparison. Interact with the slider to observe changes across years.
       </figcaption>
       <h3 className='text-space'>Design Decisions:</h3>
       <ul className="normal">
             <li>
-              <span className="u">Data Transformation to Display Average CO₂ Concentration across months of year</span> Score: 2
+              <span className="u">Data Transformation to Display Average CO₂ Concentration across months of year</span>
               <ul>
                 <li>Score: 2 (Fully Earnest)</li>
                 <li>
@@ -119,6 +121,79 @@ export default function Page() {
         Opponent's Perspective
       </div>
       <hr className="solid-line"></hr>
+      <Image src={oppose} alt="Description of image"/>
+      <figcaption className="text">
+        [Figure 2] 
+        Percentage of CO₂ in the atmosphere. This is derived by dividing parts per million (ppm) by 10,000. Start of each decade is shown in the chart.
+      </figcaption>
+      <h3 className='text-space'>Design Decisions:</h3>
+      <ul className="normal">
+            <li>
+              <span className="u">Data Transformation to Derive Relative Percentage Instead of Absolute Numerical Data</span>
+              <ul>
+                <li>Score: -2 (Fully Deceptive)</li>
+                <li>
+                  Rationale: Despite the inherent value of the data was not modified, the choice of representing the stat as a relative instead of absolute, concrete number
+                  , esp ecially when the resutling relative percentage amounts to almost insignficant is hugely deceptive by design. I was inspired by the concepts of
+                  <a href="https://www.renascence.io/journal/magnitude-bias-misjudging-the-magnitude-of-events#:~:text=Magnitude%20Bias%20is%20a%20cognitive,the%20context%20or%20relative%20proportions." className='blue'> "magnitude bias"</a>, which is a cognitive bias when people weight the magnitude disproprtionally
+                  without fully internalizing the context. This is abusing the fact people tend to <b className='orange'>frame</b> small numbers as unimportant, even when in reality
+                  they are an equivalent representation of the fundamental value of the thing they care about. For example, a person can earn 200K a year, that would amount to close to 0 percent of U.S. GDP,
+                  but people tend to frame their salary in terms of concrete, big number more than a small, dismissible relative ratio. Hence, This choice is effectively deceptive, especially
+                  because the word concentration implies proportion by default, making it is hard to discern the deception at play here.
+                </li>
+                <li>
+                  Strength: Ease of derive and interpret, making this a simple, effective deception.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <span className="u">Over-condensation of datapoints</span>
+              <ul>
+                <li>Score: -1 (Fully Deceptive)</li>
+                <li>
+                  Rationale: The proponent's argument includes the word "consistently" [increasing]. How can you truly and confidently tell if a trend
+                  is ongoing and consistent if you only have one datapoint? Two datapoints? And in our case, eight datapoints when you can have ~64 datapoints (one per year).
+                  We shrinked our datapoint set by hinting in the title "decade by decade" and showing only start of the decade years. This reduces the likelihood
+                  for any meaningful trend to be surfaced and confirmed with absolute confidence.
+
+                  The most deceptive part of this is: it looks perfectly logical to skip over datapoints; our title hints it, it makes sense to use start of the decade
+                  because we like to reference them when referencing time periods, and the visualization went the extra mile to put down a legend noting that 2024 is not a full
+                  decade before 2020. This is almost like a mirror to the MIT COVID-19 misinformation propagation paper I read as a reading, where "experts" were so good
+                  at the actual data analysis, presentation, compilation, etc. that even when they spit out false or modified information, the visualization looks genuine
+                  and credible, precisely because the recreational covid data "experts" were like actual government experts trying to be meticulous about representing the data.
+                  I think this level of attention (such as adding a legend or a datapoint that aren't realy needed) triggers a false sense of trust from the reader, which along
+                  with the minimized set of datapoints availale for reasoning, make this visualization deceptive.
+                </li>
+                <li>
+                  Strength: Ease of derive and interpret, making this a simple, effective deception.
+                </li>
+              </ul>
+            </li>
+
+
+            <li>
+              <span className="u">Deceptive Framing by Deceptive Slogan</span>
+              <ul>
+                <li>Score: -2 (Fully Deceptive)</li>
+                <li>
+                  Rationale: Putting this picture of a nose and some breath of air almost gives the false impression that we are in a science class trying
+                  to learn about the composition of air more than fighting to prove greenhouse gases like CO2 is ascending at a worrying rate. In essence,
+                  this framing, coupled with the previous design decision of representing value as small, insignficant ratio almost gives reader the
+                  impression that "oh, the air I end up breathing had this much carbon dioxide before; it doesn't seem like it jumped much and I am not affected by it that much".
+                  In essence, it shifts the perspective from a global crisis with potential catastrophic consequences like hurricanes, flooding, wild fire,
+                  and literally ground-breaking events like earthquakes to something deeply personal. "Breath easy" shifts the problem from collective and large-scaled to individual and
+                  delayable. While this doesn't directly discourage or attack the proponent's stance, it directly weakens the "alarming" aspect of the increase; it weakens the urgency
+                  by framing the problem as a concern for one's individual well-being, stating "earth is fine". I really enjoy this framing and how a simple graphic can change the attitude
+                  and amount of care we give to parsing data and intepreting its visualization.
+                </li>
+                <li>
+                  Strength: Just a picture can transforms our perspective. Courtesy of google search (free for noncommerical use).
+                </li>
+              </ul>
+            </li>
+
+        </ul>
 
     </section>
   )
