@@ -3,15 +3,15 @@
 import React, { useState, useEffect } from 'react';
 
 const CO2Slider = () => {
-  const [year, setYear] = useState(1958); // Start from
+  const [year, setYear] = useState(1960); // Start from
   const [percentage, setPercentage] = useState(0); // Percentage change in CO2 concentration
 
-  const years = [1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
-  const co2 = [3152, 3792, 3803, 3812, 3821, 3828, 3835, 3840, 3856, 3866, 3877, 3895, 3908, 3916, 3929, 3956, 3962, 3974, 3984, 4006, 4025, 4042, 4065, 4081, 4098, 4118, 4138, 4156, 4171, 4192, 4220, 4238, 4253, 4268, 4279, 4287, 4308, 4332, 4353, 4367, 4402, 4422, 4436, 4456, 4481, 4512, 4532, 4560, 4585, 4608, 4630, 4652, 4681, 4702, 4729, 4761, 4786, 4812, 4853, 4881, 4905, 4940, 4971, 4997, 5022, 5053, 5095]
+  const years = [1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+  const co2 = [3803, 3812, 3821, 3828, 3835, 3840, 3856, 3866, 3877, 3895, 3908, 3916, 3929, 3956, 3962, 3974, 3984, 4006, 4025, 4042, 4065, 4081, 4098, 4118, 4138, 4156, 4171, 4192, 4220, 4238, 4253, 4268, 4279, 4287, 4308, 4332, 4353, 4367, 4402, 4422, 4436, 4456, 4481, 4512, 4532, 4560, 4585, 4608, 4630, 4652, 4681, 4702, 4729, 4761, 4786, 4812, 4853, 4881, 4905, 4940, 4971, 4997, 5022, 5053, 5095]
   
   const data = Object.fromEntries(years.map((year, index) => [year, co2[index]]));
 
-  const baseYear = 1958
+  const baseYear = 1960
 
   // UseEffect to calculate the percentage change based on selected year
   useEffect(() => {
@@ -45,8 +45,7 @@ const CO2Slider = () => {
   const getEmoji = (year) => {
     if (year < 1975) return '😶'; // Flat face
     if (year < 1990) return '😮'; // Slightly surprised
-    if (year < 2005) return '😟'; // Slightly worried
-    if (year < 2010) return '😧'; // Really worried
+    if (year < 2013) return '😧'; // Slightly worried
     return '🚨'; // Scared
   };
 
@@ -55,7 +54,7 @@ const CO2Slider = () => {
     <div className="max-w-2xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg flex flex-col items-center">
       {/* Title */}
       <h1 className="black text-2xl font-bold mb-6 text-center">
-        Percent Increase in Atmospheric CO₂ Concentration Since 1958 🌎
+        Percent Increase in Atmospheric CO₂ Concentration Since 1960 🌎
       </h1>
 
       {/* Percentage Display with Animated Steam */}
@@ -99,13 +98,13 @@ const CO2Slider = () => {
       <div className="mt-8 w-full relative">
         <input 
           type="range" 
-          min="1958" 
+          min="1960" 
           max="2024" 
           value={year}
           onChange={(e) => setYear(parseInt(e.target.value))}
           className="w-full"
           style={{
-            background: `linear-gradient(to right, #ff7f50 ${((year - 1958) / (2024 - 1958)) * 100}%, #ccc 0%)`,
+            background: `linear-gradient(to right, #ff7f50 ${((year - baseYear) / (2024 - baseYear)) * 100}%, #ccc 0%)`,
             appearance: 'none',
             height: '8px',
             borderRadius: '4px',
@@ -117,7 +116,7 @@ const CO2Slider = () => {
         <div 
           style={{
             position: 'absolute',
-            left: `${(((year - 1958) / (2024 - 1958))) * 100 + 2}%`,
+            left: `${(((year - baseYear) / (2024 - baseYear))) * 100 + 2}%`,
             transform: 'translateX(-60%)',
             bottom: '85%',
             fontSize: '2rem', // Emoji size

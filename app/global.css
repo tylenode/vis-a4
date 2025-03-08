@@ -198,6 +198,10 @@ ul {
   color: rgb(219, 151, 219)
 }
 
+.red {
+  color: rgb(234, 187, 182)
+}
+
 .graph-text {
   font-size: 0.7rem;
   font-weight: 250;
