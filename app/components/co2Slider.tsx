@@ -43,11 +43,11 @@ const CO2Slider = () => {
 
   // Let's get it done!!!!!
   const getEmoji = (year) => {
-    if (year < 1975) return '😐'; // Flat face
+    if (year < 1975) return '😶'; // Flat face
     if (year < 1990) return '😮'; // Slightly surprised
     if (year < 2005) return '😟'; // Slightly worried
     if (year < 2010) return '😧'; // Really worried
-    return '😱'; // Scared
+    return '🚨'; // Scared
   };
 
 
@@ -55,7 +55,7 @@ const CO2Slider = () => {
     <div className="max-w-2xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg flex flex-col items-center">
       {/* Title */}
       <h1 className="black text-2xl font-bold mb-6 text-center">
-        Yearly Increase In Atmospheric CO2 Concentration Since 1958
+        Increase In Atmospheric CO2 Concentration Since 1958
       </h1>
 
       {/* Percentage Display with Animated Steam */}
