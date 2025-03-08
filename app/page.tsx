@@ -166,7 +166,7 @@ export default function Page() {
                   with the minimized set of datapoints availale for reasoning, make this visualization deceptive.
                 </li>
                 <li>
-                  Strength: Reads like an ad.
+                  Strength: Able to fit all datapoint covered content on one page. ~64 datapoints to eight selected points.
                 </li>
               </ul>
             </li>
