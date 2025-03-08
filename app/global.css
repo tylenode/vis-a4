@@ -204,6 +204,15 @@ ul {
   color: rgb(170, 165, 165)
 }
 
-.globe-text {
+.link {
+  color: lightblue
+}
+
+.black {
   color: black
+}
+
+.percentage-display {
+  margin-top: 2rem;
+  margin-bottom: 2rem
 }
