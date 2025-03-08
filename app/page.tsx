@@ -133,8 +133,7 @@ export default function Page() {
               <ul>
                 <li>Score: -2 (Fully Deceptive)</li>
                 <li>
-                  Rationale: Despite the inherent value of the data was not modified, the choice of representing the stat as a relative instead of absolute, concrete number
-                  , esp ecially when the resutling relative percentage amounts to almost insignficant is hugely deceptive by design. I was inspired by the concepts of
+                  Rationale: Despite the inherent value of the data was not modified, the choice of representing the stat as a relative instead of absolute, concrete number, especially when the resulting relative percentage amounts to almost insignficant is hugely deceptive by design. I was inspired by the concepts of
                   <a href="https://www.renascence.io/journal/magnitude-bias-misjudging-the-magnitude-of-events#:~:text=Magnitude%20Bias%20is%20a%20cognitive,the%20context%20or%20relative%20proportions." className='blue'> "magnitude bias"</a>, which is a cognitive bias when people weight the magnitude disproprtionally
                   without fully internalizing the context. This is abusing the fact people tend to <b className='orange'>frame</b> small numbers as unimportant, even when in reality
                   they are an equivalent representation of the fundamental value of the thing they care about. For example, a person can earn 200K a year, that would amount to close to 0 percent of U.S. GDP,
