@@ -137,8 +137,9 @@ export default function Page() {
                   <a href="https://www.renascence.io/journal/magnitude-bias-misjudging-the-magnitude-of-events#:~:text=Magnitude%20Bias%20is%20a%20cognitive,the%20context%20or%20relative%20proportions." className='blue'> "magnitude bias"</a>, which is a cognitive bias when people weight the magnitude disproprtionally
                   without fully internalizing the context. This is abusing the inverse of this bias: when people tend to <b className='orange'>frame</b> small numbers as unimportant, even when in reality
                   they are an equivalent representation of the fundamental value of the thing they care about. For example, a person can earn 200K a year, that would amount to close to 0 percent of U.S. GDP,
-                  but people tend to frame their salary in terms of concrete, big number more than a small, dismissible relative ratio. Hence, This choice is effectively deceptive, especially
-                  because the word concentration implies proportion by default, making it is hard to discern the deception at play here.
+                  but people tend to frame their salary in terms of concrete, big number more than a small, dismissible relative ratio. Hence, the choice of representing this data as small ratios is effectively deceptive, especially
+                  because the word concentration implies proportion by default and lends itself to be reasonably represented as ratios. These, coupled with the fact that people find it hard 
+                  to care enough about a small increase (another analogy is in ML, the vanishing gradient problem, when the gradient is too small to amount to any learning, so it was washed away to oblivion naturally), make it is hard to discern the deception at play here.
                 </li>
                 <li>
                   Strength: Ease of derive and interpret, making this a simple, effective deception.
