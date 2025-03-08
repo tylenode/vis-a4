@@ -135,7 +135,7 @@ export default function Page() {
                 <li>
                   Rationale: Despite the inherent value of the data was not modified, the choice of representing the stat as a relative instead of absolute, concrete number, especially when the resulting relative percentage amounts to almost insignficant is hugely deceptive by design. I was inspired by the concepts of
                   <a href="https://www.renascence.io/journal/magnitude-bias-misjudging-the-magnitude-of-events#:~:text=Magnitude%20Bias%20is%20a%20cognitive,the%20context%20or%20relative%20proportions." className='blue'> "magnitude bias"</a>, which is a cognitive bias when people weight the magnitude disproprtionally
-                  without fully internalizing the context. This is abusing the fact people tend to <b className='orange'>frame</b> small numbers as unimportant, even when in reality
+                  without fully internalizing the context. This is abusing the inverse of this bias: when people tend to <b className='orange'>frame</b> small numbers as unimportant, even when in reality
                   they are an equivalent representation of the fundamental value of the thing they care about. For example, a person can earn 200K a year, that would amount to close to 0 percent of U.S. GDP,
                   but people tend to frame their salary in terms of concrete, big number more than a small, dismissible relative ratio. Hence, This choice is effectively deceptive, especially
                   because the word concentration implies proportion by default, making it is hard to discern the deception at play here.
