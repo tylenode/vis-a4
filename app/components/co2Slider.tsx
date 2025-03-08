@@ -1,7 +1,6 @@
 'use client'; // Marks this component as client-side
 
 import React, { useState, useEffect } from 'react';
-// import { ArrowUpIcon } from '@heroicons/react/solid'; // HeroIcon for the upward arrow
 
 const CO2Slider = () => {
   const [year, setYear] = useState(1958); // Start from
@@ -26,47 +25,78 @@ const CO2Slider = () => {
   }, [year]);
 
   const getColor = (percent) => {
-    const hue = ((100 - percent) * 120) / 100;
-    return `hsl(${hue}, 100%, 50%)`;
+    let hue;
+  
+    if (percent <= 33) {
+      // Green to Orange (only a little green at the beginning)
+      hue = 120 - (percent * 90) / 33;  // From green (120) to orange (30)
+    } else if (percent <= 90) {
+      // Orange to Crimson Red (dominant transition)
+      hue = 30 - ((percent - 33) * 30) / 57;  // From orange (30) to crimson red (around 350)
+    } else {
+      // Crimson Red (after 90%, we stay in the crimson red range)
+      hue = 350;
+    }
+  
+    return `hsl(${hue}, 100%, 45%)`; // Slightly darker (45%) for a richer look
   };
+
+  // Let's get it done!!!!!
+  const getEmoji = (year) => {
+    if (year < 1975) return '😐'; // Flat face
+    if (year < 1990) return '😮'; // Slightly surprised
+    if (year < 2005) return '😟'; // Slightly worried
+    if (year < 2010) return '😧'; // Really worried
+    return '😱'; // Scared
+  };
+
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg flex flex-col items-center">
       {/* Title */}
       <h1 className="black text-2xl font-bold mb-6 text-center">
-        Increase In CO2 Concentration Since 1958
+        Yearly Increase In Atmospheric CO2 Concentration Since 1958
       </h1>
 
       {/* Percentage Display with Animated Steam */}
       <div className="relative mb-6 flex flex-col items-center">
-        <div 
-          className="text-8xl font-bold text-center transition-all duration-300 ease-in-out"
-          style={{ color: getColor(percentage) }}
-        >
-          {percentage.toFixed(1)}%
-          {/* <ArrowUpIcon className="h-16 w-16 inline-block ml-2 animate-pulse" /> */}
-        </div>
+      <span 
+        className="text-8xl font-bold text-center transition-all duration-300 ease-in-out flex items-center"
+        style={{ color: getColor(percentage) }}
+      >
+       {year !== baseYear ? (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 ml-2 w-20 h-20">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+        </svg>
+      ) : null}
 
-        {/* Steam and heat effect (animated ping) */}
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-20">
-          {[...Array(5)].map((_, i) => (
-            <div 
-              key={i}
-              className="absolute w-16 h-16 rounded-full animate-ping"
-              style={{ 
-                backgroundColor: getColor(percentage),
-                animationDelay: `${i * 0.2}s`,
-                animationDuration: '1.5s',
-                opacity: 0.5,
-                transform: 'scale(1.2)', // Scale effect instead of translate for a more contained animation
-              }}
-            />
-          ))}
-        </div>
+        {percentage.toFixed(1)}%
+      </span>
+
+
+      {/* Steam and heat effect (animated ping with dynamic size) */}
+      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-20">
+        {[...Array(5)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full animate-ping"
+            style={{
+              backgroundColor: getColor(percentage),
+              animationDelay: `${i * 0.2}s`,
+              animationDuration: '1.5s',
+              opacity: 0.5,
+              transform: `scale(${1 + (percentage / 200)})`, // Linear scale increase
+              width: `${(percentage / 5) + 100}px`, // Linear size increase
+              height: `${(percentage / 5) + 100}px`, // Linear size increase
+            }}
+          />
+        ))}
+      </div>
+
       </div>
 
       {/* Slider with space between percentage and slider */}
-      <div className="mt-8 w-full">
+      <div className="mt-8 w-full relative">
         <input 
           type="range" 
           min="1958" 
@@ -74,11 +104,36 @@ const CO2Slider = () => {
           value={year}
           onChange={(e) => setYear(parseInt(e.target.value))}
           className="w-full"
+          style={{
+            background: `linear-gradient(to right, #ff7f50 ${((year - 1958) / (2024 - 1958)) * 100}%, #ccc 0%)`,
+            appearance: 'none',
+            height: '8px',
+            borderRadius: '4px',
+            outline: 'none',
+          }}
         />
+
+        {/* Emoji Slider Thumb */}
+        <div 
+          style={{
+            position: 'absolute',
+            left: `${((year - 1958) / (2024 - 1958)) * 100}%`,
+            transform: 'translateX(-50%)',
+            fontSize: '2rem', // Emoji size
+            zIndex: 1, // To make sure it stays on top of the slider
+          }}
+        >
+          {getEmoji(year)}
+        </div>
+
+        {/* Year Display */}
         <div className="black text-center mt-2 text-xl font-semibold">
           Year: {year}
         </div>
       </div>
+
+
+
     </div>
   );
 };

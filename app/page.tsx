@@ -41,7 +41,7 @@ export default function Page() {
       <hr className="solid-line"></hr>
 
       <p className="mb-4 normal">
-      {`Climate Change is real.`}
+      {`Greenhouse gases like CO2 is climing up at an alarming rate.`}
       </p>
 
       <div className="big">
