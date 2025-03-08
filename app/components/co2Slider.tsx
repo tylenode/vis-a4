@@ -27,9 +27,9 @@ const CO2Slider = () => {
   const getColor = (percent) => {
     let hue;
   
-    if (percent <= 10) {
+    if (percent <= 6) {
       // Green to Orange (only a little green at the beginning)
-      hue = 120 - (percent * 90) / 33;  // From green (120) to orange (30)
+      hue = 110 - (percent * 90) / 33;  // From green (120) to orange (30)
     } else if (percent <= 30) {
       // Orange to Crimson Red (dominant transition)
       hue = 30 - ((percent - 33) * 30) / 57;  // From orange (30) to crimson red (around 350)
