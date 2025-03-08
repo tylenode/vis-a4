@@ -55,7 +55,7 @@ const CO2Slider = () => {
     <div className="max-w-2xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg flex flex-col items-center">
       {/* Title */}
       <h1 className="black text-2xl font-bold mb-6 text-center">
-        Increase In Atmospheric CO2 Concentration Since 1958
+        Percent Increase in Atmospheric CO₂ Concentration Since 1958 🌎
       </h1>
 
       {/* Percentage Display with Animated Steam */}
@@ -117,8 +117,9 @@ const CO2Slider = () => {
         <div 
           style={{
             position: 'absolute',
-            left: `${((year - 1958) / (2024 - 1958)) * 100}%`,
-            transform: 'translateX(-50%)',
+            left: `${(((year - 1958) / (2024 - 1958))) * 100 + 2}%`,
+            transform: 'translateX(-60%)',
+            bottom: '85%',
             fontSize: '2rem', // Emoji size
             zIndex: 1, // To make sure it stays on top of the slider
           }}
@@ -129,6 +130,7 @@ const CO2Slider = () => {
         {/* Year Display */}
         <div className="black text-center mt-2 text-xl font-semibold">
           Year: {year}
+          <div className="subtext">CO2 Concentration In parts per million (ppm): {data[year]}</div>
         </div>
       </div>
 
