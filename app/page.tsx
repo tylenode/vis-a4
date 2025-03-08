@@ -195,6 +195,17 @@ export default function Page() {
 
         </ul>
 
+        
+      <div className="big">
+        Closing thoughts
+      </div>
+      <hr className="solid-line"></hr>
+      Deception is surprisingly simple because deception can be unintentional. For the deceptive aspects of my graphs, they actually surface as I design,
+      instead of me thinking hard on the specific methods to push for a specific narrative in data visualization. Looking back, I think most if not all
+      of my visualizations represent data ethically. I would like to define ethical analysis and visulization as - as long as our visulization technique doesn't
+      leave room for interpretations that can directly harm a group of people and discredit objective truth, the visualization is ethical. I believe to determine mislead in a visualization,
+      whether it be on a piece of paper, as a javascript animation, or a new york times opinion article appendix, the key thing is to understand it is not about intent to mislead (as creators can unintentionally mislead), but more
+      on whether the creator leaves sufficient room for misinterpretation that deviates from objective truth. Overall, I have learned a great deal from exploring climate change data and going through what is almost like a creator's internal debate.
     </section>
   )
 }
